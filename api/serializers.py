@@ -8,9 +8,16 @@ API Serializers for converting Post and User model instances to JSON format
 '''
 
 
+class OwnerSerializer(serializers.ModelSerializer):
+    # Gets owner, this is used in PostSerializer
+    class Meta:
+        model = User
+        fields = ['id', 'username']
+
+
 class PostSerializer(serializers.ModelSerializer):
     # Gets owner for each post
-    owner = serializers.ReadOnlyField(source='owner.username')
+    owner = OwnerSerializer(read_only=True)
 
     # Fields to include in serialized data
     class Meta:
