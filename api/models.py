@@ -13,6 +13,10 @@ class Post(models.Model):
     owner = models.ForeignKey(
         'auth.User', related_name='posts', on_delete=models.CASCADE)
 
-    # Default ordering for Post objects
+    # Sets default ordering for Post objects
     class Meta:
         ordering = ['date']
+
+    # Renames Post objects
+    def __str__(self):
+        return f'{self.owner}: {self.title}'

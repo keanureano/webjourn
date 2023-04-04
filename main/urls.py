@@ -18,6 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # All api calls will be on api/
+    # All REST api calls will be through api/
     path('api/', include('api.urls'))
 ]
