@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "http://localhost:8000/api",
+  params: {
+    format: "json",
+  },
+});
 
 function App() {
-  const [count, setCount] = useState(0);
+  useEffect(() => {
+    api.get("/posts").then((res) => console.log(res));
+  }, []);
 
-  return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <div>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <h1 className="underline text-3xl">Hello tailwind!</h1>
-      </div>
-    </div>
-  );
+  return <div>Hello world</div>;
 }
 
 export default App;
