@@ -3,7 +3,8 @@ from rest_framework import generics
 from api import serializers
 from django.contrib.auth.models import User
 from api.models import Post
-
+from rest_framework import permissions
+from api.permissions import IsOwnerOrReadOnly
 
 '''
 API views that handle HTTP requests for retrieving and creating blog posts and users
@@ -15,6 +16,7 @@ class PostList(generics.ListCreateAPIView):
     # API view to get all posts or create a new post
     queryset = Post.objects.all()
     serializer_class = serializers.PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     # Method called when a new post is created
     # Sets the post's owner to the current user
@@ -26,6 +28,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     # API view to get, update, or delete a single post.
     queryset = Post.objects.all()
     serializer_class = serializers.PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
 
 class UserList(generics.ListAPIView):
