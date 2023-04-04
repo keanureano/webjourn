@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from api.models import Post
 
 
-'''Serializers are used to convert User/Post model instances to JSON format for API responses.'''
+'''
+API Serializers for converting Post and User model instances to JSON format
+'''
 
 
 class PostSerializer(serializers.ModelSerializer):
