@@ -22,7 +22,4 @@ urlpatterns = [
 
     # Route for RESTFUL API
     path('api/', include('api.urls'), name='api'),
-
-    # Route for Frontend
-
 ]
