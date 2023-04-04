@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
+    # include only the id and username fields of the User model
     class Meta:
         model = User
         fields = ['id', 'username']
