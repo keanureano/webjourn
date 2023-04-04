@@ -7,12 +7,12 @@ from django.contrib.auth.models import User
 
 
 class UserList(generics.ListAPIView):
-    # get all users in a list
+    # Get all users
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
 
 
 class UserDetail(generics.RetrieveAPIView):
-    # get single user detail
+    # Get single user
     queryset = User.objects.all()
     serializer_class = serializers.UserSerializer
