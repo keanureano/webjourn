@@ -14,6 +14,10 @@ pip install -r requirements.txt
 
 py manage.py runserver
 
-# optional: livereload
+# dev: livereload
 
 py manage.py livereload
+
+# dev: auto build
+
+npm run watch --prefix frontend
