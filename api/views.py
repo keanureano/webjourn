@@ -8,7 +8,7 @@ from api.permissions import IsOwnerOrReadOnly
 
 '''
 API views that handle HTTP requests for retrieving and creating blog posts and users
-Each view serializes the data returned from the database queryset into JSON format
+Each view uses serializer to convert database queryset into JSON format
 '''
 
 
