@@ -1,10 +1,10 @@
 # create venv
 
-python -m venv venv
+python -m venv .env
 
-# activate venv
+# activate env
 
-.\venv\Scripts\activate
+.env\Scripts\activate
 
 # install requirements
 
