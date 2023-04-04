@@ -17,7 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # Route for Django Admin
     path('admin/', admin.site.urls),
-    # All REST api calls will be through api/
-    path('api/', include('api.urls')),
+
+    # Route for RESTFUL API
+    path('api/', include('api.urls'), name='api'),
+
+    # Route for Frontend
+
 ]
