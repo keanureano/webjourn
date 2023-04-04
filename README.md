@@ -14,10 +14,11 @@ pip install -r requirements.txt
 
 py manage.py runserver
 
-# dev: livereload
+or
 
-py manage.py livereload
+npm start
 
-# dev: auto build
-
-npm run watch --prefix frontend
+# autobuild and refresh tool for dev:
+npm i
+npm i --prefix frontend
+npm run dev
