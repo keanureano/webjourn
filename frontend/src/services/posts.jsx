@@ -8,14 +8,15 @@ const axiosInstance = axios.create({
   },
 });
 
-const get = async (request) => {
+async function get(request) {
   // const response = await axiosInstance.get(request);
   // const posts = response.data
   const posts = [
     {
       id: 1,
       title: "hello user!",
-      content: "",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A magni dolorem magnam aperiam. Explicabo, illo non. Exercitationem ea illum iure qui vitae iste, reiciendis harum ipsam maxime numquam necessitatibus ab?",
       owner: {
         id: 1,
         username: "admin",
@@ -25,7 +26,8 @@ const get = async (request) => {
     {
       id: 2,
       title: "hello admin!",
-      content: "",
+      content:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum minima cumque quam, reiciendis voluptate ut ea officiis porro autem distinctio, deleniti veniam ad repellendus eaque repellat velit non placeat suscipit.",
       owner: {
         id: 2,
         username: "user",
@@ -35,7 +37,8 @@ const get = async (request) => {
     {
       id: 3,
       title: "hello again!",
-      content: "",
+      content:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe omnis sint sequi ullam voluptate minima, necessitatibus reprehenderit illum consequatur ea, repudiandae voluptas consectetur voluptatem. Eveniet asperiores similique consequatur voluptatum accusamus?",
       owner: {
         id: 2,
         username: "user",
@@ -44,16 +47,20 @@ const get = async (request) => {
     },
   ];
 
-  // converts timestamp to moments ago
   const newPosts = posts.map((post) => {
-    const unixDate = Date.parse(post.date);
-    const momentDate = moment(unixDate).fromNow();
-    return { ...post, date: momentDate };
+    const dateNow = moment();
+    // if date is less than one month ago, format to moment
+    const formattedDate =
+      dateNow.diff(post.date, "month") < 1
+        ? moment(post.date).fromNow()
+        : moment(post.date).format("dddd, MMMM Do YYYY");
+
+    return { ...post, date: formattedDate };
   });
 
   console.log(newPosts);
-  return posts;
-};
+  return newPosts;
+}
 
 const postApi = { get };
 
