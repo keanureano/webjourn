@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: "http://localhost:8000/api",
-  params: {
-    format: "json",
-  },
-});
+import postApi from "./services/posts";
 
 function App() {
+  const [posts, setPosts] = useState([]);
+  function getPosts() {
+    postApi.get().then((posts) => setPosts(posts));
+  }
   useEffect(() => {
-    api.get("/posts").then((res) => console.log(res));
+    getPosts();
   }, []);
 
-  return <div>Hello world</div>;
+  return <div></div>;
 }
 
 export default App;

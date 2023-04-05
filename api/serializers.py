@@ -22,7 +22,7 @@ class PostSerializer(serializers.ModelSerializer):
     # Fields to include in serialized data
     class Meta:
         model = Post
-        fields = ['id', 'title', 'content', 'owner']
+        fields = ['id', 'title', 'content', 'owner', 'date']
 
 
 class UserSerializer(serializers.ModelSerializer):
