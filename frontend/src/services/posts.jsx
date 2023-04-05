@@ -9,20 +9,8 @@ const axiosInstance = axios.create({
 });
 
 async function get(request) {
-  // const response = await axiosInstance.get(request);
-  // const posts = response.data
-  const posts = [
-    {
-      id: 1,
-      title: "test title!",
-      content: "test content",
-      owner: {
-        id: 1,
-        username: "test owner",
-      },
-      date: "2023-04-04T06:36:51.324577Z",
-    },
-  ];
+  const response = await axiosInstance.get(request);
+  const posts = response.data;
 
   const newPosts = posts.map((post) => {
     const dateNow = moment();
