@@ -3,9 +3,9 @@ import ReactPlayer from "react-player";
 
 function YoutubePlayer({ videoId }) {
   return (
-    <div className="aspect-video">
+    <div className="post-vid-wrapper">
       <ReactPlayer
-        className="overflow-hidden rounded-lg"
+        className="post-vid"
         width="100%"
         height="100%"
         url={`https://www.youtube.com/watch?v=${videoId}`}

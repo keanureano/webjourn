@@ -6,7 +6,7 @@
 }
 
 #root {
-  @apply min-h-[100dvh] bg-primary-300;
+  @apply min-h-[100dvh] bg-gradient-to-b from-primary-200 to-primary-300;
 }
 
 .nav {
@@ -22,7 +22,7 @@
 }
 
 .post {
-  @apply max-w-2xl p-16 space-y-8 prose prose-yellow;
+  @apply max-w-2xl p-16 space-y-8 prose border-2 rounded-lg bg-neutral-50 prose-yellow border-neutral-900;
 }
 
 .post-header {
@@ -41,6 +41,14 @@
 
 .post-owner {
   @apply font-bold uppercase;
+}
+
+.post-vid-wrapper {
+  @apply p-8 aspect-video;
+}
+
+.post-vid {
+  @apply overflow-hidden rounded-lg shadow-lg;
 }
 
 .prose span:not(:last-child) {
