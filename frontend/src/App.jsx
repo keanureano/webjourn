@@ -1,10 +1,15 @@
-import PostList from "./components/PostList";
+import Posts from "./components/Posts";
 
 function App() {
   return (
-    <main className="container">
-      <PostList />
-    </main>
+    <div id="app">
+      <nav id="navbar">
+
+      </nav>
+      <main id="body">
+        <Posts />
+      </main>
+    </div>
   );
 }
 

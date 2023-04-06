@@ -15,7 +15,7 @@ class Post(models.Model):
 
     # Sets default ordering for Post objects
     class Meta:
-        ordering = ['date']
+        ordering = ['-date']
 
     # Renames Post objects
     def __str__(self):

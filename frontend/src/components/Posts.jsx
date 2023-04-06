@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import postApi from "../services/posts";
-import PostMarkdown from "./PostMarkdown";
+import Post from "./Post";
 
-function PostList() {
+function Posts() {
   const [posts, setPosts] = useState([]);
 
   function getPosts() {
@@ -14,12 +14,12 @@ function PostList() {
   }, []);
 
   return (
-    <div className="posts">
+    <div id="posts">
       {posts.map((post) => (
-        <PostMarkdown key={post.id} post={post} />
+        <Post key={post.id} post={post} />
       ))}
     </div>
   );
 }
 
-export default PostList;
+export default Posts;
