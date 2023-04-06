@@ -5,10 +5,22 @@ function YoutubePlayer({ videoId }) {
   return (
     <div className="post-vid-wrapper">
       <ReactPlayer
-        className="post-vid"
+        className="post-media"
         width="100%"
         height="100%"
         url={`https://www.youtube.com/watch?v=${videoId}`}
+      />
+    </div>
+  );
+}
+
+function ImgurImage({ imageUrl }) {
+  return (
+    <div className="post-pic-wrapper">
+      <img
+        className="post-pic post-media"
+        src={imageUrl}
+        alt="embedded imgur"
       />
     </div>
   );
@@ -18,6 +30,11 @@ const LinkSeparator = ({ href, children }) => {
   if (href.match(/youtube\.com\/watch/)) {
     const videoId = href.match(/[?&]v=([^&]+)/)[1];
     return <YoutubePlayer videoId={videoId} />;
+  }
+  if (href.match(/imgur\.com/)) {
+    const imageId = href.match(/\/(\w+)(\.\w+)?$/)[1];
+    const imageUrl = `https://i.imgur.com/${imageId}.jpg`;
+    return <ImgurImage imageUrl={imageUrl} />;
   }
   return <a href={href}>{children}</a>;
 };

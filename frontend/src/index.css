@@ -45,7 +45,7 @@
 }
 
 .posts {
-  @apply space-y-8 py-16 md:py-32;
+  @apply py-16 space-y-8 md:py-32;
 }
 
 .posts-label {
@@ -86,7 +86,15 @@
   @apply p-4 aspect-video;
 }
 
-.post-vid {
+.post-pic-wrapper {
+  @apply p-4;
+}
+
+.post-pic {
+  @apply m-auto max-h-64;
+}
+
+.post-media {
   @apply overflow-hidden rounded-lg shadow-lg;
 }
 
