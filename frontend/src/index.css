@@ -4,8 +4,12 @@
 
 @layer base {
   #root {
-    @apply min-h-[100dvh]
+    @apply min-h-[100dvh];
   }
+}
+
+.post {
+  @apply bg-gray-100 prose-sm prose prose-yellow;
 }
 
 .prose span:not(:last-child) {

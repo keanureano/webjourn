@@ -29,7 +29,7 @@ const components = {
 
 function Post({ post }) {
   return (
-    <article className="prose-sm prose prose-yellow">
+    <article className="post">
       <div>
         <h1>{post.title}</h1>
         <p>
