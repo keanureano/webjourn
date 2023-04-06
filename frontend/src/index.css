@@ -9,16 +9,20 @@
   @apply min-h-[100dvh];
 }
 
+.nav {
+  @apply h-full p-4;
+}
+
 .main {
   @apply container flex justify-center m-auto;
 }
 
 .posts {
-  @apply space-y-8
+  @apply space-y-8 first:pt-16 last:pb-16;
 }
 
 .post {
-  @apply max-w-2xl p-16 space-y-8 prose bg-gray-100 prose-yellow;
+  @apply max-w-2xl p-16 space-y-8 prose prose-yellow;
 }
 
 .post-header {

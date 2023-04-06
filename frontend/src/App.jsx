@@ -3,7 +3,8 @@ import Posts from "./components/Posts";
 function App() {
   return (
     <div class="app">
-      <nav class="navbar">
+      <nav class="nav">
+        <h1>WebJourn</h1>
       </nav>
       <main class="main">
       <Posts />
