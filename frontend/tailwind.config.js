@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ["Mulish", "ui-sans-serif", "system-ui"],
+      },
       colors: {
         primary: {
           50: "#FDFDFC",
@@ -41,8 +44,8 @@ export default {
           700: "#71717F",
           800: "#4A4A54",
           900: "#26262B",
-          950: "#131316"
-        }
+          950: "#131316",
+        },
       },
     },
   },
