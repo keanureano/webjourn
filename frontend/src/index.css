@@ -6,7 +6,7 @@
 }
 
 #root {
-  @apply min-h-[100dvh];
+  @apply min-h-[100dvh] bg-primary-300;
 }
 
 .nav {
