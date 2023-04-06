@@ -8,6 +8,15 @@ const axiosInstance = axios.create({
   },
 });
 
+function convertDateToMoment(post) {
+  const dateNow = moment();
+  const formattedDate =
+    dateNow.diff(post.date, "month") < 1
+      ? moment(post.date).fromNow()
+      : moment(post.date).format("YYYY-MM-DD");
+  return { ...post, date: formattedDate };
+}
+
 async function get(request) {
   // const response = await axiosInstance.get(request);
   // const posts = response.data;
@@ -48,14 +57,8 @@ async function get(request) {
   ];
 
   const newPosts = posts.map((post) => {
-    const dateNow = moment();
-    // if date is less than one month ago, format to moment
-    const formattedDate =
-      dateNow.diff(post.date, "month") < 1
-        ? moment(post.date).fromNow()
-        : moment(post.date).format("YYYY-MM-DD");
-
-    return { ...post, date: formattedDate };
+    const newPost = convertDateToMoment(post);
+    return newPost;
   });
 
   console.log(newPosts);
