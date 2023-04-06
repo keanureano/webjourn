@@ -30,13 +30,16 @@ const components = {
 function Post({ post }) {
   return (
     <article className="post">
-      <div>
-        <h1>{post.title}</h1>
-        <p>
-          {post.owner.username} {post.date}
-        </p>
+      <header className="post-header">
+        <h1 className="post-title">{post.title}</h1>
+        <div className="post-meta">
+          <h4 className="post-owner">{post.owner.username}</h4>
+          <h4 className="post-date">{post.date}</h4>
+        </div>
+      </header>
+      <div className="post-body">
+        <ReactMarkdown components={components} children={post.content} />
       </div>
-      <ReactMarkdown components={components} children={post.content} />
     </article>
   );
 }

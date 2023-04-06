@@ -14,7 +14,7 @@ function Posts() {
   }, []);
 
   return (
-    <div id="posts">
+    <div class="posts">
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}

@@ -2,12 +2,11 @@ import Posts from "./components/Posts";
 
 function App() {
   return (
-    <div id="app">
-      <nav id="navbar">
-
+    <div class="app">
+      <nav class="navbar">
       </nav>
-      <main id="body">
-        <Posts />
+      <main class="main">
+      <Posts />
       </main>
     </div>
   );

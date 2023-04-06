@@ -3,13 +3,40 @@
 @tailwind utilities;
 
 @layer base {
-  #root {
-    @apply min-h-[100dvh];
-  }
+}
+
+#root {
+  @apply min-h-[100dvh];
+}
+
+.main {
+  @apply container flex justify-center m-auto;
+}
+
+.posts {
+  @apply space-y-8
 }
 
 .post {
-  @apply bg-gray-100 prose-sm prose prose-yellow;
+  @apply max-w-2xl p-16 space-y-8 prose bg-gray-100 prose-yellow;
+}
+
+.post-header {
+  @apply space-y-2;
+}
+
+.post-meta {
+  @apply flex space-x-2;
+}
+
+.post-title,
+.post-owner,
+.post-date {
+  @apply p-0 m-0;
+}
+
+.post-owner {
+  @apply font-bold uppercase;
 }
 
 .prose span:not(:last-child) {
