@@ -30,7 +30,7 @@ const components = {
 function Post({ post }) {
   return (
     <article className="post">
-      <header className="post-header">
+      <header className="post-header not-prose">
         <h1 className="post-title">{post.title}</h1>
         <div className="post-meta">
           <h4 className="post-owner">{post.owner.username}</h4>

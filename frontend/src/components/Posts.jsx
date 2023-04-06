@@ -14,7 +14,8 @@ function Posts() {
   }, []);
 
   return (
-    <div class="posts">
+    <div className="posts">
+      <h1 className="posts-label">All Blog Posts</h1>
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
