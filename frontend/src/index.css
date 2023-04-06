@@ -49,7 +49,7 @@
 }
 
 .posts-label {
-  @apply md:text-4xl font-normal text-primary-700;
+  @apply text-xl md:text-2xl text-primary-700;
 }
 
 .post {
