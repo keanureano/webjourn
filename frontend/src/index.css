@@ -70,6 +70,10 @@
   @apply p-0 m-0;
 }
 
+.post-title {
+  @apply font-black md:text-3xl;
+}
+
 .post-owner {
   @apply font-bold uppercase;
 }
@@ -95,7 +99,7 @@
 }
 
 .post-media {
-  @apply overflow-hidden rounded-lg shadow-lg ring-offset-2 ring-2 ring-neutral-900;;
+  @apply overflow-hidden rounded-lg shadow-lg ring-offset-2 ring-2 ring-neutral-900;
 }
 
 .prose span:not(:last-child) {
