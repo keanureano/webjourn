@@ -2,7 +2,7 @@
 
 ## Intro
 
-WebJourn is a web application that combines Django and React to create a mobile-responsive blogging platform. The project utilizes Django models to store blog posts and React to render them dynamically on the front-end. It showcases the use of multiple technologies (Django, React, and Tailwind) to create a fully functional and visually appealing application.
+This is WebJourn. WebJourn is a web application that combines Django, React, and Tailwind to create a blogging platform. The project utilizes Django models to store blog posts, and using RESTful API conventions, it converts Django posts into JSON content, for the frontend application to render. The frontend proceeds to convert the markdown content into an actual HTML format, with custom Tailwind styling, embedded Images and also embedded YouTube links. It showcases the use of multiple technologies (Django, React, React plugins, and Tailwind) to create not only a fully functional but also a visually appealing web application.
 
 ##### The web app has two main parts:
 
