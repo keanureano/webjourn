@@ -1,4 +1,4 @@
-# WebJourn: A Web Application Built with Django, React, and Tailwind
+# WebJourn: A visually appealing blogging platform built with Django, React, and Tailwind, featuring RESTful API conventions for efficient communication between backend and frontend.
 
 ## Intro
 
