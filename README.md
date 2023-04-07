@@ -4,7 +4,7 @@
 
 This is WebJourn. WebJourn is a web application that combines Django, React, and Tailwind to create a blogging platform. The project utilizes Django models to store blog posts, and using RESTful API conventions, it converts Django posts into JSON content, for the frontend application to render. The frontend proceeds to convert the markdown content into an actual HTML format, with custom Tailwind styling, embedded Images and also embedded YouTube links. It showcases the use of multiple technologies (Django, React, React plugins, and Tailwind) to create not only a fully functional but also a visually appealing web application.
 
-##### The web app has two main parts:
+#### The web app has two main parts:
 
 The two parts are the backend and the frontend. The backend is built with Django and consists of files such as views.py, urls.py, and manage.py. The frontend is built with Vite React and Tailwind and consists of files like App.js, index.js, and package.json.
 
@@ -12,7 +12,7 @@ The two parts are the backend and the frontend. The backend is built with Django
 
 The distinctiveness and complexity of WebJourn lies in its use of multiple technologies to create a fully functional web application. Combining Django, React, and Tailwind, the project showcases how different frameworks can be integrated to create a seamless user experience.
 
-##### WebJourn has several key features that make it distinct:
+#### WebJourn has several key features that make it distinct:
 
 - RESTful API Integration: The frontend fetches data from the backend using RESTful API conventions, allowing for efficient and standardized communication between the two components of the application. Additionally, the use of a RESTful API created with Django on the backend allows for dynamic content updates without the need for a page refresh. This further enhances the user experience by providing a faster and more responsive application.
 
@@ -30,7 +30,7 @@ The distinctiveness and complexity of WebJourn lies in its use of multiple techn
 - React: Used as the front-end library for rendering blog posts dynamically and providing a responsive user interface.
 - Tailwind: Used to style the application and make it mobile-responsive.
 
-##### There are several reasons why I chose these technologies for WebJourn.
+#### There are several reasons why I chose these technologies for WebJourn.
 
 - First, I am currently taking the Fullstack Open 2022 course, which covers frontend web app development using React and RESTful APIs integration on the backend servers.
 
