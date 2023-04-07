@@ -13,11 +13,11 @@
 }
 
 #root {
-  @apply min-h-[100dvh] bg-gradient-to-b from-primary-200 to-primary-300;
+  @apply min-h-[100dvh] bg-gradient-to-b from-primary-50 to-primary-200;
 }
 
 .nav {
-  @apply h-full px-4 py-4 md:px-32 text-primary-700 bg-primary-300;
+  @apply h-full px-4 py-4 md:px-32 text-primary-800 bg-primary-400;
 }
 
 .nav-brand {
@@ -25,19 +25,19 @@
 }
 
 .hero {
-  @apply relative flex flex-col items-center justify-center py-32 text-center md:py-64 bg-primary-300;
+  @apply relative flex flex-col items-center justify-center py-36 text-center md:py-72 bg-primary-400;
 }
 
 .hero-title {
-  @apply text-4xl font-semibold text-primary-800 md:text-6xl;
+  @apply text-4xl font-bold text-primary-800 md:text-7xl;
 }
 
 .hero-subtitle {
-  @apply text-sm text-primary-700;
+  @apply text-base md:text-lg font-semibold text-primary-700;
 }
 
 .hero-footer {
-  @apply absolute bottom-4 animate-bounce text-primary-700;
+  @apply absolute bottom-4 animate-bounce text-primary-800;
 }
 
 .main {
@@ -49,7 +49,7 @@
 }
 
 .posts-label {
-  @apply text-xl md:text-2xl text-primary-700;
+  @apply text-xl md:text-2xl text-primary-800;
 }
 
 .post {
