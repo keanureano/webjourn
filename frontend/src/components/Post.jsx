@@ -41,7 +41,7 @@ const LinkSeparator = ({ href, children }) => {
 
 const components = {
   a: LinkSeparator,
-  p: ({ children }) => <span className="inline-block">{children}</span>,
+  p: ({ children }) => <span className="inline-block w-full">{children}</span>,
 };
 
 function Post({ post }) {

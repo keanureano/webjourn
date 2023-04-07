@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class Post(models.Model):
     # Fields for the post model
     title = models.CharField(max_length=64, blank=True, default='')
     content = models.TextField(blank=True, default='')
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=timezone.now())
 
     # Relationship field to the User model
     owner = models.ForeignKey(
